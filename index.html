@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>La Pizzaria del Muriloklaus</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Meta for theme color -->
+  <meta name="theme-color" content="#0b0b0b">
+</head>
+<body>
+  <!-- animated background layers -->
+  <div class="bg">
+    <div class="bg-overlay"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">LM</div>
+      <div>
+        <h1>La Pizzaria del Muriloklaus</h1>
+        <p class="tag">Sabor artesanal — noite & requinte</p>
+      </div>
+    </div>
+
+    <nav class="top-nav">
+      <a href="#menu">Menu</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="cart.html" class="cart-link">Carrinho <span id="nav-count"></span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Experimente a melhor pizza da cidade</h2>
+        <p>Ingredientes selecionados, forno à lenha e um toque clássico de Muriloklaus.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#menu">Ver Menu</a>
+          <a class="btn-ghost" href="cart.html">Ver Carrinho (<span id="float-count">0</span>)</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="./img/hero-pizza.jpg" alt="Pizza artesanal" onerror="this.onerror=null;this.src='./img/pizza-artezanal.jpg'">
+      </div>
+    </section>
+
+    <section id="menu" class="section menu-section">
+      <h3>Nosso Cardápio</h3>
+      <p class="section-lead">Pizzas clássicas e especiais — escolha sua preferida.</p>
+
+      <div class="products" id="product-list">
+        <!-- Produtos injetados por JS -->
+      </div>
+    </section>
+
+    <section id="sobre" class="section about-section">
+      <h3>Sobre a Pizzaria</h3>
+      <p>La Pizzaria del Muriloklaus nasceu da paixão pelo tradicional. Forno à lenha, massa de longa fermentação e coberturas premium.</p>
+    </section>
+
+    <section id="galeria" class="section gallery-section">
+      <h3>Galeria</h3>
+      <div class="gallery">
+        <img src="./img/gal1.jpg" alt="Interior" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1541698444083-023c97d3f4b6?w=800&q=80'">
+        <img src="./img/gal2.jpg" alt="Pizza sendo assada" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542281286-9e0a16bb7366?w=800&q=80'">
+        <img src="./img/gal3.jpg" alt="Fatia" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1601924638867-3ec8c1f36fbe?w=800&q=80'">
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating cart -->
+  <a class="cart-float" href="cart.html" id="cart-float">
+    <span class="cart-icon">🛒</span>
+    <span class="cart-text">Carrinho</span>
+    <span class="cart-count" id="float-badge">0</span>
+  </a>
+
+  <footer class="site-footer">
+    <div>© 2025 La Pizzaria del Muriloklaus — Feito por Thauan Forcareli</div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <script>initParticlesCanvas();</script>
+</body>
+</html>
